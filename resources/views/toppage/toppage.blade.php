@@ -407,7 +407,7 @@ a:hover {
 
         <a class="grid-gallery" href="img/img4-1600.jpg" data-aos="fade-up">
             <img class="grid-item" src="img/img4-400.jpg" srcset="img/img4-400.jpg 400w,
-                        img/img4-800.jpg 800w" alt="Sainte Chapelle">
+                        img/img1-800.jpg 800w" alt="Sainte Chapelle">
         </a>
 
     </main>
@@ -481,7 +481,7 @@ $(function(){
 
 
 
-
+<!-- 初回 -->
 
 
 
