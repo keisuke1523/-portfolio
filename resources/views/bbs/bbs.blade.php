@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Album example · Bootstrap v5.0</title>
+    <title>BBS</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
 
@@ -29,6 +29,10 @@
 
         .categori-color {
             background-color: #CCFFCC;
+            padding: 10px;
+            margin: 10px;
+            /* letter-spacing: 2.5px; */
+            white-space: pre-line
         }
 
         body {
@@ -77,9 +81,14 @@ a {
 
 a:hover {
   text-decoration: underline;
-  text-decoration-color: #11FFFF	;
+  text-decoration-color: #111111;
 }
 
+.pagenation {
+  display: flex;
+  justify-content: center;
+    
+}
 
     
 
@@ -127,12 +136,7 @@ a:hover {
                                         @csrf
                                     </form>
         </li>
-
-    
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+ 
     </div>
   </div>
 </div>
@@ -153,10 +157,10 @@ a:hover {
             </div>
     </div>
             <div class="row">
-            <div class="text2">
+            <!-- <div class="text2">
                 カテゴリの一覧
             </div>
-                <nav class="categori-color">
+                <nav class="categori-color1">
                     <ul class="nav flex-column m-0 p-3">
                         @foreach($categoryArray as $category)
                             <li class="nav-item mb-2">
@@ -164,9 +168,9 @@ a:hover {
                             </li>
                         @endforeach
                     </ul>
-                </nav>
+                </nav> -->
                 <div class="text2">
-                掲示板タイトル一覧
+                掲示板スレ一覧
                </div>
                 <div class="categori-color">
                 @foreach($studyPostArray as $studyPost)
@@ -234,16 +238,20 @@ a:hover {
                         @csrf
                         <input type="hidden" name="categoryId" value="{{$categoryId}}">
                         <div class="col-4 form-floating">
-                            <input name="name" type="text" class="form-control" id="name"  style="height: 30px">
-                            <label for="floatingInput">名前</label><br>
+                        <div class="mb-3">
+                            <input name="name" type="text" class="form-control" id="name"  style="height: 30px" placeholder="名前">
+                        </div>
+                        
                         </div>
                         <div class="col-4 form-floating">
-                            <input name="email" type="email" class="form-control" id="email"  style="height: 30px">
-                            <label for="floatingInput">email</label><br>
+                        <div class="mb-3">
+                            <input name="email" type="email" class="form-control" id="email"  style="height: 30px" placeholder="email">
+                        </div>
                         </div>
                         <div class="col-6 form-floating">
-                            <input name="title" type="text" class="form-control" id="title"  style="height: 30px">
-                            <label for="floatingInput">タイトル</label><br>
+                        <div class="mb-3">
+                            <input name="title" type="text" class="form-control" id="title"  style="height: 30px" placeholder="タイトル">
+                        </div>
                         </div>
 
                         <div class="col-10 form-floating">
@@ -259,7 +267,9 @@ a:hover {
     </div>
     </div>
 </div>
+<div class="pagenation">
 {{$studyPostArray->links('vendor.pagination.bootstrap-4')}}
+</div>
 </main>
 
 

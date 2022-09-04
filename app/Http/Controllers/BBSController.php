@@ -10,6 +10,9 @@ use App\Models\Category;
 
 class BBSController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+      }
     //
     public function index($categoryId) {
         // 掲示板の一覧を取得(確認)

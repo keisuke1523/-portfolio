@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Album example · Bootstrap v5.0</title>
+    <title>BBS detail</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
 
@@ -42,7 +42,7 @@
 
     <div class="album py-5">
         <div class="container">
-
+        
             @foreach($studyPostArray as $studyPost)
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <div class="col-12">
@@ -63,26 +63,29 @@
             @endforeach
             <form method="post" action="{{route('bbsReplyRegister')}}">
                 @csrf
-                <div class="card card-body">
-                    <div class="form-floating">
-                        <div class="col-4 form-floating">
-                            <input name="name" type="text" class="form-control" id="name" style="height: 30px">
-                            <label for="floatingInput">名前</label><br>
+              <div class="card card-body">
+                 <div class="col-4 form-floating">
+                        <div class="mb-3">
+                            <input name="name" type="text" class="form-control" id="name"  style="height: 30px" placeholder="名前">
                         </div>
-                        <div class="col-4 form-floating">
-                            <input name="email" type="email" class="form-control" id="email" style="height: 30px">
-                            <label for="floatingInput">email</label><br>
+                        
+                 </div>
+                     <div class="col-4 form-floating">
+                        <div class="mb-3">
+                            <input name="email" type="email" class="form-control" id="email"  style="height: 30px" placeholder="email">
                         </div>
+                     </div>
                         <div class="col-10 form-floating">
                        
                             <textarea name="content" class="form-control" id="textarea" rows="3" cols="10" style="height: 250px"></textarea>
                         </div><br>
                         <input name="studyPostId" type="hidden" value ="{{$id}}">
                         <button class="btn btn-primary" type="submit">
-                            書き込む
+                          書き込む
                         </button>
-                    </div>
+                
                 </div>
+          
             </form>
         </div>
     </div>

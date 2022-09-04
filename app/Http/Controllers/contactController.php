@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\Mail;
 
 class contactController extends Controller
 {
+
+    public function __construct(){
+        $this->middleware('auth');
+      }
+      
     public function index() {
 
         return view('contact.contact');
@@ -33,6 +38,6 @@ class contactController extends Controller
             // メールアドレス、件名を設定
              $message->to('u8764c28e772tz@gmail.com')->subject('問い合わせ内容');
     	});
-        return view('contact.contact');
+        return redirect('/response');
     }
 }

@@ -67,6 +67,12 @@ a:hover {
   text-decoration-color: #0000FF;
 }
 
+.pagenation {
+  display: flex;
+  justify-content: center;
+    
+}
+
 
 
     </style>
@@ -112,13 +118,8 @@ a:hover {
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
-        </li>
-
-    
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+        </li>   
+   
     </div>
   </div>
 </div>
@@ -160,8 +161,10 @@ a:hover {
                             <form method="post" action="{{route('diaryRegister')}}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="col-6 form-floating">
-                                    <input name="title" type="text" class="form-control" id="title" style="height: 30px">
-                                    <label for="title">タイトル</label><br>
+                                <div class="mb-3">
+                                    <input name="title" type="text" class="form-control" id="title" style="height: 30px" placeholder="タイトル">
+                                    <br>
+                                </div>
                                 </div>
                                 <div class="form-floating">
                                 
@@ -192,6 +195,8 @@ a:hover {
     
         <div class="container">
             @foreach($diarypostArray as $diarypost)
+            @if($diarypost["user_id"] == Auth::id())
+            
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <div class="col-12">
                         <div class="card">
@@ -209,7 +214,7 @@ a:hover {
                             <div class="card-body1">
                                 <p class="card-text">{{$diarypost["content"]}}</p>
                                 @if($diarypost["image"])
-                                <p><img src="data:image/png;base64,{{$diarypost["image"]}}"></p>
+                                <p><img width="250px" src="data:image/png;base64,{{$diarypost["image"]}}"></p>
                                 @endif
                                 
                             </div>
@@ -217,16 +222,17 @@ a:hover {
                  </div>
              </div>
                             
-                            
+             <br><br>
+             @endif             
             @endforeach
-            <br><br>
+            
                             
 
         </div>
-        
+        <div class="pagenation">
          <!-- ページネーション-->
-         {{$diarypostArray->links()}}
-
+         {{$diarypostArray->links('vendor.pagination.bootstrap-4')}}
+        </div>
     
 
 </main>

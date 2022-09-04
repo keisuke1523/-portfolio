@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateStudyPost extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('study_post', function (Blueprint $table) {
-            $table->id();
-            $table->string("title");
+            $table->bigIncrements('id');
+            $table->string("title")->nullable();
             $table->string("content");
             $table->bigInteger('user_id');
             $table->bigInteger('category_id');

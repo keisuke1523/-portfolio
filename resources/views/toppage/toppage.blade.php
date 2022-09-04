@@ -8,6 +8,9 @@
  </head>
 <style>
 
+
+
+
 .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -20,7 +23,14 @@
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
             }
-        }
+        
+         
+  .main {
+    position: relative;
+    left: 70px;
+
+    }
+
     .content {
         top: 100px;
         text-align: right;
@@ -46,6 +56,11 @@
   color: 	#FF66FF	;
   text-shadow:3px 3px 2px #0099CC;
 }
+
+.section1 {
+  position: relative;
+left: 100px;
+} 
 
 .footer-style {
   font-size: 35px;
@@ -110,6 +125,7 @@
 
 
 
+
 /****** Base style. ******/
 
 
@@ -159,13 +175,18 @@ a:hover {
   /* Grid */
 
 .grid {
-    width: 94vw;
+    width: 80vw;
     margin: 0 auto 3vw;
     display: grid;
     gap: 2vw;
     grid-template-columns: repeat(2, 46vw);
     /* (94 - 2) / 2 */
-    grid-template-rows: repeat(8, 46vw);
+    grid-template-rows: repeat(3, 46vw);
+    justify-content: center;
+    position: relative;
+    left: 100px;
+    
+
 }
 
 .grid-item {
@@ -179,25 +200,26 @@ a:hover {
 
 
   
-   .grid {
+   /* .grid {
         width: 80vw;
         gap: 1vw;
         grid-template-columns: repeat(3, 26vw);
-        /* (80 - 2) / 3 */
+        
         grid-template-rows: repeat(5, 26vw);
     }
+   */
 
 
     .grid-item {
-        transition: .3s;
+         transition: .3s;
     }
 
     .grid-item:hover {
         filter: grayscale(0);
         box-shadow: 0 0 2rem rgba(0, 0, 0, .5);
-        transform: scale(1.1);
+        transform: scale(1.1); 
         z-index: 3;
-        position: relative;
+        position: relative; 
     }
 
     
@@ -211,7 +233,17 @@ a:hover {
     max-width: 120vw;
     max-height: 80vh;
 }
+        
+.footer-style {
+  text-align: center;
+}
 
+
+}
+
+
+
+     
  </style>
 
     <!-- Scripts -->
@@ -249,7 +281,10 @@ a:hover {
           <a class="nav-link" href="bbs">掲示板</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="diary">日記</a>
+        @if( Auth::check() )
+        <a class="nav-link" href="diary">日記</a>
+        @endif
+          
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contact">問い合わせ</a>
@@ -265,15 +300,7 @@ a:hover {
                                     </form>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
+      </div>
   </div>
 </nav>
 </div>
@@ -290,6 +317,7 @@ a:hover {
 </div>
 </section>
 <br><br>
+<div class="main">
 <div>
 <h2>飼い主同士の交流サイト<h2>
 </div>
@@ -308,7 +336,7 @@ a:hover {
     </div>
   </div>
 
-  <div class="col-6 col-pr-4">
+  <div class="section1">
   <div class="col">
     <div class="card" style="width: 35rem" >
       <img src="{{ asset('img/image3.png')}}"class="fadein" class="card-img-top" alt="...">
@@ -321,6 +349,7 @@ a:hover {
     </div>
   </div>
 </div>
+
 
   <div class="col">
     <div class="card" style="width: 35rem">
@@ -380,34 +409,38 @@ a:hover {
             <a class="grid-gallery" href="img/img2-1600.jpg" data-aos="fade-up">
             <img class="grid-item" src="img/img2-400.jpg" srcset="img/img2-400.jpg 400w,
                         img/img2-800.jpg 800w" 
-              alt="昭和記念公園<br>住所：〒190-0014 東京都立川市緑町３１７３<br>遊ぶには最適な場所です">
+              alt="昭和記念公園<br>住所：〒190-0014 東京都立川市緑町３１７３<br>自然が豊で犬の散歩に最適です。ドッグランもあります。">
         </a>
 
         <a class="grid-gallery" href="img/img3-1600.jpg" data-aos="fade-up">
             <img class="grid-item" src="img/img3-400.jpg" srcset="img/img3-400.jpg 400w,
                         img/img3-800.jpg 800w" 
-               alt="葛西臨海公園<br>住所：〒134-0086 東京都江戸川区臨海町６丁目２<br>遊ぶには最適な場所です">
+               alt="葛西臨海公園<br>住所：〒134-0086 東京都江戸川区臨海町６丁目２<br>海が見える公園で水族館などもあります。">
         </a>
 
         <a class="grid-gallery" href="img/img4-1600.jpg" data-aos="fade-up">
             <img class="grid-item" src="img/img4-400.jpg" srcset="img/img4-400.jpg 400w,
                         img/img4-800.jpg 800w"
-               alt="夢の島公園<br>住所：〒136-0081 東京都江東区夢の島２丁目１<br>遊ぶには最適な場所です">
+               alt="夢の島公園<br>住所：〒136-0081 東京都江東区夢の島２-１<br>ドッグラン施設及び犬とバーベキューが楽しめるステーションもあります">
         </a>
 
-        <a class="grid-gallery" href="img/img4-1600.jpg" data-aos="fade-up">
-            <img class="grid-item" src="img/img4-400.jpg" srcset="img/img4-400.jpg 400w,
-                        img/img4-800.jpg 800w" alt="Sainte Chapelle">
+        <a class="grid-gallery" href="img/img5-1600.jpg" data-aos="fade-up">
+            <img class="grid-item" src="img/img5-400.jpg" srcset="img/img5-400.jpg 400w,
+                        img/img5-800.jpg 800w" 
+                        alt="木場公園<br>住所：〒135-0023 東京都江東区平野4-6-1<br>エリアごとにドッグランが併設されていて、公園内の散歩も楽しめます。">
+              
         </a>
 
-        <a class="grid-gallery" href="img/img4-1600.jpg" data-aos="fade-up">
-            <img class="grid-item" src="img/img4-400.jpg" srcset="img/img4-400.jpg 400w,
-                        img/img4-800.jpg 800w" alt="Sainte Chapelle">
-        </a>
+        <a class="grid-gallery" href="img/img6-1600.jpg" data-aos="fade-up">
+            <img class="grid-item" src="img/img6-400.jpg" srcset="img/img4-400.jpg 400w,
+                        img/img6-800.jpg 800w"
+                         alt="代々木公園<br>住所：〒151-0052 東京都渋谷区代々木神園町２−１<br>小型犬エリアと中・大型犬エリアの2つのドッグランが併設されていて、公園無内の散歩も楽しめます。">
+        </a>  
 
-        <a class="grid-gallery" href="img/img4-1600.jpg" data-aos="fade-up">
-            <img class="grid-item" src="img/img4-400.jpg" srcset="img/img4-400.jpg 400w,
-                        img/img1-800.jpg 800w" alt="Sainte Chapelle">
+        <a class="grid-gallery" href="img/img7-1600.jpg" data-aos="fade-up">
+            <img class="grid-item" src="img/img7-400.jpg" srcset="img/img7-400.jpg 400w,
+                        img/img7-800.jpg 800w"
+                         alt="大井ふ頭中央海浜公園<br>住所：〒140-0003 東京都品川区八潮４丁目１−１９<br>登録証を発行することで無料ドッグランを無料で利用でき、ワンちゃんには快適な場所です。">
         </a>
 
     </main>
@@ -431,6 +464,7 @@ a:hover {
     <span class="text-muted small">&copy;2022 dogsite, Inc. All Rights Reserved.</span>
   </div>
 </footer>
+</div>
 </div>
 
 <script>
@@ -478,8 +512,7 @@ $(function(){
 <script src="{{ asset('js/script.js')}}"></script>
 
 
-
-
+</div>
 
 <!-- 三回目 -->
 

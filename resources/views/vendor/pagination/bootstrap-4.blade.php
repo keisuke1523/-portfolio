@@ -1,7 +1,6 @@
 
 
 
-
 @if ($paginator->hasPages())
     <nav>
         <ul class="pagination">
