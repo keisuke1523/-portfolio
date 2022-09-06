@@ -40,6 +40,7 @@
         .card-header {
             background-color: #EEEEEE
         }
+        
 
         .text {
             font-size: 40px;

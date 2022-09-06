@@ -13,10 +13,13 @@ class AlterDiaryTable extends Migration
      */
     public function up()
     {
-        // カラム名を変更
-        Schema::table('diary_post', function (Blueprint $table) {
-            $table->binary('image');
-        });
+        // // カラム名を変更
+        // Schema::table('diary_post', function (Blueprint $table) {
+        //     $table->binary('image');
+        // });
+
+        DB::statement("ALTER TABLE diary_post ADD image MEDIUMBLOB NOT NULL");
+
 
                // カラム名を変更
               // Schema::table('study_post', function (Blueprint $table) {
