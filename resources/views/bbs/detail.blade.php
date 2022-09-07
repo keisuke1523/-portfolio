@@ -63,10 +63,10 @@
             @endforeach
             <form method="post" action="{{route('bbsReplyRegister')}}">
                 @csrf
-              <div class="card card-body">
+            <div class="card card-body">
                  <div class="col-4 form-floating">
                         <div class="mb-3">
-                            <input name="name" type="text" class="form-control" id="name"  style="height: 30px" placeholder="名前">
+                            <input name="name" type="text" class="form-control" id="name"  style="height: 30px" placeholder="名前" required="required">
                         </div>
                         
                  </div>
@@ -77,7 +77,7 @@
                      </div>
                         <div class="col-10 form-floating">
                        
-                            <textarea name="content" class="form-control" id="textarea" rows="3" cols="10" style="height: 250px"></textarea>
+                            <textarea name="content" class="form-control" id="textarea" rows="3" cols="10" style="height: 250px" required="required"></textarea>
                         </div><br>
                         <input name="studyPostId" type="hidden" value ="{{$id}}">
                         <button class="btn btn-primary" type="submit">

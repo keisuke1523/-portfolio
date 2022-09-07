@@ -239,7 +239,7 @@ a:hover {
                         <input type="hidden" name="categoryId" value="{{$categoryId}}">
                         <div class="col-4 form-floating">
                         <div class="mb-3">
-                            <input name="name" type="text" class="form-control" id="name"  style="height: 30px" placeholder="名前">
+                            <input name="name" type="text" class="form-control" id="name"  style="height: 30px" placeholder="名前" required="required">
                         </div>
                         
                         </div>
@@ -250,12 +250,12 @@ a:hover {
                         </div>
                         <div class="col-6 form-floating">
                         <div class="mb-3">
-                            <input name="title" type="text" class="form-control" id="title"  style="height: 30px" placeholder="タイトル">
+                            <input name="title" type="text" class="form-control" id="title"  style="height: 30px" placeholder="タイトル" required="required">
                         </div>
                         </div>
 
                         <div class="col-10 form-floating">
-                            <textarea name="content" class="form-control" id="textarea" rows="10" cols="10" style="height: 250px"></textarea><br>
+                            <textarea name="content" class="form-control" id="textarea" rows="10" cols="10" style="height: 250px" required="required"></textarea><br>
                         </div>
                         <button class="btn btn-primary" type="submit">
                             書き込む
