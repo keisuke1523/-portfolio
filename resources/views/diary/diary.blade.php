@@ -163,7 +163,7 @@ a:hover {
                                 @csrf
                                 <div class="col-6 form-floating">
                                 <div class="mb-3">
-                                    <input name="title" type="text" class="form-control" id="title" style="height: 30px" placeholder="タイトル">
+                                    <input name="title" type="text" class="form-control" id="title" style="height: 30px" placeholder="タイトル" required="required">
                                     <br>
                                 </div>
                                 </div>
@@ -172,7 +172,7 @@ a:hover {
                              <input type="file" name="imageFile" id="example">
 
 
-                                    <textarea class="form-control"   name="content" id="content" rows="100" cols="10"  style="height: 300px"></textarea>
+                                    <textarea class="form-control"   name="content" id="content" rows="100" cols="10"  style="height: 300px" required="required"></textarea>
                                     <br><br>
                                     <div id="preview">
                                     </div>
