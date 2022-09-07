@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('toppage.toppage');
+    return view('auth.login');
 });
 
 
