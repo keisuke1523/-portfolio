@@ -50,6 +50,8 @@
     color: rgba(0,0,255,1);
 }
 
+
+
 .card-text  {
   font-family: monospace;
   font-weight: bolder;
@@ -185,6 +187,7 @@ a:hover {
     justify-content: center;
     position: relative;
     left: 100px;
+    
     
 
 }
@@ -409,6 +412,7 @@ a:hover {
             <a class="grid-gallery" href="img/img2-1600.jpg" data-aos="fade-up">
             <img class="grid-item" src="img/img2-400.jpg" srcset="img/img2-400.jpg 400w,
                         img/img2-800.jpg 800w" 
+                
               alt="昭和記念公園<br>住所：〒190-0014 東京都立川市緑町３１７３<br>自然が豊で犬の散歩に最適です。ドッグランもあります。">
         </a>
 
