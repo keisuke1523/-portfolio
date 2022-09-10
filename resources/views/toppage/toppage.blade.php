@@ -24,7 +24,16 @@
                 font-size: 3.5rem;
             }
         
-         
+            * {
+      float: none;
+      position: static;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
   .main {
     position: relative;
     left: 70px;
@@ -255,8 +264,9 @@ a:hover {
     <link href="{{ asset('bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous-basic.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+   
     <script src="{{ asset('bootstrap/dist/jq/jquery-3.6.0.min.js') }}"></script>
-    <script
+    <script>
   src="https://code.jquery.com/jquery-3.6.0.js"
   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
   crossorigin="anonymous"></script>

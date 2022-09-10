@@ -88,8 +88,12 @@
           
             </form>
         </div>
+        
+
     </div>
 
+    <a class="nav-link" href="/bbs" style="color: white">戻る</a>
+ 
 </main>
 
 <script src="{{ asset('bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>

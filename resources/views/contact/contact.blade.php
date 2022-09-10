@@ -104,6 +104,7 @@
         <br>
         <button class="w-100 btn btn-lg btn-primary" type="submit">送信</button>
     </form>
+    <a href="#" onclick="window.history.back(); return false;">直前のページに戻る</a>
 </main>
 
 </div>
