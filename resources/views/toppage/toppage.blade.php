@@ -10,7 +10,7 @@
 <style>
 
 
-
+@media (min-width: 768px) {
 
 .bd-placeholder-img {
             font-size: 1.125rem;
@@ -72,6 +72,7 @@
 .card {
   display: flex;
   justify-content: center;
+  width: 100%;
 
 }
 
@@ -101,6 +102,7 @@ left: 100px;
   opacity : 0;
   transform: translateX(-100px);
   transition : all 1s;
+  width: 50%;
 }
 
 .fadein2.active2{
@@ -112,6 +114,7 @@ left: 100px;
   opacity : 0;
   transform : translate(100px, 0);
   transition : all 1s;
+  width: 50%;
 }
 
 .fadein3.active3{
@@ -257,21 +260,66 @@ a:hover {
 .footer-style {
   text-align: center;
 }
+}
 
 @media (max-width: 768px) {
   .card {
-    justify-content: center;
+  
+    width: 100%;
   }
 
   h1 {
     font-size: 20px;
   }
+  
+  .fadein {
+  opacity : 0;
+  transform : translate(0, 100px);
+  transition : all 1s;
+}
 
-  .section1 {
-  position: relative;
-  left: 3px;
+.fadein.active{
+  opacity : 1;
+  transform : translate(0, 0);
+}
 
-} 
+
+.fadein2 {
+  opacity : 0;
+  transform: translateX(-100px);
+  transition : all 1s;
+  width:100%;
+}
+
+.fadein2.active2{
+  opacity : 1;
+  transform : translate(0, 0);
+}
+
+.fadein3 {
+  opacity : 0;
+  transform : translate(100px, 0);
+  transition : all 1s;
+  width: 100%;
+}
+
+.fadein3.active3{
+  opacity : 1;
+  transform : translate(0, 0);
+}
+
+.title {
+  font-size: 0.5px;
+  color: green;
+  
+}
+
+.text-success {
+  width: 100%;
+}
+
+
+
 
 }
 
@@ -342,7 +390,7 @@ a:hover {
 </header>
 
 <secion>
-<div class="card"  style="width: 100%" >
+<div class="card">
   <img src="{{ asset('img/image.jpg')}}" class="card-img"  alt="...">
   <div class="card-img-overlay title">
   <div  class="text-center">
@@ -401,9 +449,9 @@ a:hover {
 </section>
 <br><br>
 <hr class="featurette-divider">
-
+           
             <div class="row featurette">
-                <div class="col-md-7 fadein2" style="width: 100%">
+                <div class="col-md-7 fadein2">
                     <h2 class="text-success" ><br><br>日ごとに投稿が確認できる。<br>飼い主が抱えてる悩みもみんなで解決。</h2><br>
                     <h3>例えば、飼っているワンちゃんが水をなかなか飲まないなど、<br>オススメの餌の情報など飼い主同士が情報を共有できる掲示板です。</h3>
                 </div>
@@ -411,11 +459,11 @@ a:hover {
                 <img src="{{ asset('img/image5.png')}}" class="img-fluid" alt="...">
                 </div>
             </div>
-
+           
             <hr class="featurette-divider">
 
             <div class="row featurette">
-                <div class="col-md-7 order-md-2 fadein3" style="width: 100%">
+                <div class="col-md-7 order-md-2 fadein3">
                 　　　<h2 class="text-success" ><br>ワンちゃんの成長の記録及び管理できる。</h2><br>
                     <h3>日々のワンちゃんの生活を日ごとに記録できます。<br>写真のアップロードもできるので可愛いワンちゃんの成長が<br>実感できます。</h3>
                 </div>
@@ -427,7 +475,7 @@ a:hover {
             <hr class="featurette-divider">
 
             <div class="row featurette">
-                <div class="col-md-7 fadein2"  style="width: 100%">
+                <div class="col-md-7 fadein2">
                 　　<h2 class="text-success" >オススメ散歩スポット一覧</h2><br>
                     <h3><br>ワンちゃんと楽しめる散歩スポットを掲載します。<br>もしオススメの散歩スポットがあれば掲示板に書き込み<br>お願いします。その都度サイトを更新していきます。</h3>
                 </div>
