@@ -20,7 +20,7 @@
             user-select: none;
         }
 
-        @media (min-width: 768px) {
+        
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
             }
@@ -142,7 +142,7 @@ left: 100px;
 }
 
 
-@media (min-width: 768px) {
+
 
 
 /****** Base style. ******/
@@ -217,7 +217,7 @@ a:hover {
     filter: grayscale(100%);
 }
 
-}
+
 
   
    /* .grid {
@@ -258,6 +258,20 @@ a:hover {
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .card {
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .section1 {
+  position: relative;
+  left: 3px;
+
+} 
 
 }
 
@@ -346,7 +360,7 @@ a:hover {
 <section>
 <div class=" row row-cols-1 row-cols-md-2  g-4">
   <div class="col">
-    <div class="card"  style="width: 35rem"  >
+    <div class="card"  style="width: 100%"  >
       <img src="{{ asset('img/image2.png')}}"class="fadein" class="card-img-top" alt="...">
       <div class="fadein">
       <div class="card-body">
@@ -359,7 +373,7 @@ a:hover {
 
   <div class="section1">
   <div class="col">
-    <div class="card" style="width: 35rem" >
+    <div class="card" style="width: 100%" >
       <img src="{{ asset('img/image3.png')}}"class="fadein" class="card-img-top" alt="...">
       <div class="fadein">
       <div class="card-body">
@@ -373,7 +387,7 @@ a:hover {
 
 
   <div class="col">
-    <div class="card" style="width: 35rem">
+    <div class="card" style="width: 100%">
       <img src="{{ asset('img/image4.png')}}" class="fadein"　class="card-img-top" alt="...">
       <div class="fadein">
       <div class="card-body">
@@ -389,7 +403,7 @@ a:hover {
 <hr class="featurette-divider">
 
             <div class="row featurette">
-                <div class="col-md-7 fadein2" style="width: 45rem">
+                <div class="col-md-7 fadein2" style="width: 100%">
                     <h2 class="text-success" ><br><br>日ごとに投稿が確認できる。<br>飼い主が抱えてる悩みもみんなで解決。</h2><br>
                     <h3>例えば、飼っているワンちゃんが水をなかなか飲まないなど、<br>オススメの餌の情報など飼い主同士が情報を共有できる掲示板です。</h3>
                 </div>
@@ -401,7 +415,7 @@ a:hover {
             <hr class="featurette-divider">
 
             <div class="row featurette">
-                <div class="col-md-7 order-md-2 fadein3">
+                <div class="col-md-7 order-md-2 fadein3" style="width: 100%">
                 　　　<h2 class="text-success" ><br>ワンちゃんの成長の記録及び管理できる。</h2><br>
                     <h3>日々のワンちゃんの生活を日ごとに記録できます。<br>写真のアップロードもできるので可愛いワンちゃんの成長が<br>実感できます。</h3>
                 </div>
@@ -413,7 +427,7 @@ a:hover {
             <hr class="featurette-divider">
 
             <div class="row featurette">
-                <div class="col-md-7 fadein2"  style="width: 45rem">
+                <div class="col-md-7 fadein2"  style="width: 100%">
                 　　<h2 class="text-success" >オススメ散歩スポット一覧</h2><br>
                     <h3><br>ワンちゃんと楽しめる散歩スポットを掲載します。<br>もしオススメの散歩スポットがあれば掲示板に書き込み<br>お願いします。その都度サイトを更新していきます。</h3>
                 </div>

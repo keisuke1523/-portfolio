@@ -43,7 +43,7 @@
            text-decoration-color: #111111;
         }
 
-        @media (min-width: 768px) {
+        @media (max-width: 768px) {
 
             a:hover {
            text-decoration: underline;

@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
 
@@ -21,6 +22,15 @@
 
     .sub1 {
         font-size: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .title {
+        color: green;
+        font-size: 20px;
+        text-align: center;
+    }
+
     }
     </style>
 <body>

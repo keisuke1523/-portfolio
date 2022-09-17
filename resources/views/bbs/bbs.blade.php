@@ -91,7 +91,7 @@ a:hover {
     
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
         
 }
     
@@ -259,7 +259,7 @@ a:hover {
                         </div>
                         </div>
                         <label for="subject">本文:</label> 
-                        <div class="col-11 form-floating">
+                        <div class="col-12 form-floating">
                             <textarea name="content" class="form-control" id="textarea" rows="10" cols="10" style="height: 250px" placeholder="本文" required="required"></textarea><br>
                         </div>
                         <button class="btn btn-primary" type="submit">

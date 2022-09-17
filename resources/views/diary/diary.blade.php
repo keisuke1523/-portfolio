@@ -75,7 +75,7 @@ a:hover {
     
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
 
     a:hover {
   text-decoration: underline;
