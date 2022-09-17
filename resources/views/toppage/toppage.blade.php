@@ -320,7 +320,7 @@ a:hover {
 </header>
 
 <secion>
-<div class="card"  style="width: 82rem" >
+<div class="card"  style="width: 100%" >
   <img src="{{ asset('img/image.jpg')}}" class="card-img"  alt="...">
   <div class="card-img-overlay title">
   <div  class="text-center">
