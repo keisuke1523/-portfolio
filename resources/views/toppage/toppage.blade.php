@@ -3,6 +3,7 @@
    <head>
        <title>dogsite</title>
        <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width,initial-scale=1">
 
       
  </head>
@@ -67,6 +68,13 @@
   color: 	#FF66FF	;
   text-shadow:3px 3px 2px #0099CC;
 }
+
+.card {
+  display: flex;
+  justify-content: center;
+
+}
+
 
 .section1 {
   position: relative;
@@ -134,7 +142,7 @@ left: 100px;
 }
 
 
-
+@media (min-width: 768px) {
 
 
 /****** Base style. ******/
@@ -209,7 +217,7 @@ a:hover {
     filter: grayscale(100%);
 }
 
-
+}
 
   
    /* .grid {

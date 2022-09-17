@@ -1,5 +1,6 @@
 <html>
    <head>
+   <meta name="viewport" content="width=device-width,initial-scale=1">
  </head>
 <style>
 
@@ -11,11 +12,11 @@
             user-select: none;
         }
 
-        @media (min-width: 768px) {
+  
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
             }
-        }
+        
   .title {
     letter-spacing: 10px;
     white-space: nowrap; 
@@ -43,10 +44,10 @@
 
 
 
+    @media (min-width: 768px) {
 
 
-
-
+    }
 
 
 

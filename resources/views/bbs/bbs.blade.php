@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
     <title>BBS</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
@@ -21,11 +23,10 @@
             user-select: none;
         }
 
-        @media (min-width: 768px) {
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
             }
-        }
+        
 
         .categori-color {
             background-color: #CCFFCC;
@@ -90,8 +91,9 @@ a:hover {
     
 }
 
-    
-
+@media (min-width: 768px) {
+        
+}
     
     </style>
 
@@ -237,27 +239,27 @@ a:hover {
                     <form method="post" action="{{route('bbsRegister')}}">
                         @csrf
                         <input type="hidden" name="categoryId" value="{{$categoryId}}">
-                        <div class="col-4 form-floating">
+                        <div class="col-8 form-floating">
                         <div class="mb-3">
                             <label for="subject">名前:</label> 
                             <input name="name" type="text" class="form-control" id="name"  style="height: 30px" placeholder="例：テスト 太郎" required="required">
                         </div>
                         
                         </div>
-                        <div class="col-4 form-floating">
+                        <div class="col-8 form-floating">
                         <div class="mb-3">
                             <label for="subject">メールアドレス:</label> 
                             <input name="email" type="email" class="form-control" id="email"  style="height: 30px" placeholder="例：example@test.jp">
                         </div>
                         </div>
-                        <div class="col-6 form-floating">
+                        <div class="col-8 form-floating">
                         <div class="mb-3">
                             <label for="subject">タイトル:</label> 
                             <input name="title" type="text" class="form-control" id="title"  style="height: 30px" placeholder="タイトル" required="required">
                         </div>
                         </div>
                         <label for="subject">本文:</label> 
-                        <div class="col-10 form-floating">
+                        <div class="col-11 form-floating">
                             <textarea name="content" class="form-control" id="textarea" rows="10" cols="10" style="height: 250px" placeholder="本文" required="required"></textarea><br>
                         </div>
                         <button class="btn btn-primary" type="submit">

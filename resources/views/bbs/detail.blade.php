@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>BBS detail</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
@@ -21,11 +22,10 @@
             user-select: none;
         }
 
-        @media (min-width: 768px) {
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
             }
-        }
+        
 
         body {
             background-image: url("{{ asset('img/bak.jpg')}}")
@@ -41,6 +41,15 @@
         a:hover {
            text-decoration: underline;
            text-decoration-color: #111111;
+        }
+
+        @media (min-width: 768px) {
+
+            a:hover {
+           text-decoration: underline;
+           text-decoration-color: #111111;
+        }
+
         }
     </style>
 
@@ -75,20 +84,20 @@
             <form method="post" action="{{route('bbsReplyRegister')}}">
                 @csrf
             <div class="card card-body">
-                 <div class="col-4 form-floating">
+                 <div class="col-8 form-floating">
                         <div class="mb-3">
                             <label for="subject">名前:</label> 
                             <input name="name" type="text" class="form-control" id="name"  style="height: 30px" placeholder="例：テスト 太郎" required="required">
                         </div>
                         
                  </div>
-                     <div class="col-4 form-floating">
+                     <div class="col-8 form-floating">
                         <div class="mb-3">
                             <label for="subject">メールアドレス:</label> 
                             <input name="email" type="email" class="form-control" id="email"  style="height: 30px" placeholder="例：example@test.jp">
                         </div>
                      </div>
-                        <div class="col-10 form-floating">
+                        <div class="col-12 form-floating">
                        
                             <textarea name="content" class="form-control" id="textarea" rows="3" cols="10" style="height: 250px" required="required"></textarea>
                         </div><br>

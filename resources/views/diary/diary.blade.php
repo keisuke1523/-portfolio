@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
 
@@ -22,11 +23,11 @@
             user-select: none;
         }
 
-        @media (min-width: 768px) {
+      
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
             }
-        }
+        
 
         body {
             background-image: url("{{ asset('img/image3.jpeg')}}")
@@ -74,7 +75,18 @@ a:hover {
     
 }
 
+@media (min-width: 768px) {
 
+    a:hover {
+  text-decoration: underline;
+  text-decoration-color: #0000FF;
+}
+
+a {
+  text-decoration: none;
+}
+
+}
 
     </style>
 
@@ -161,13 +173,13 @@ a:hover {
                         <div class="card-body">
                             <form method="post" action="{{route('diaryRegister')}}" enctype="multipart/form-data">
                                 @csrf
-                                <div class="col-6 form-floating">
+                                <div class="col-8 form-floating">
                                 <div class="mb-3">
                                     <input name="title" type="text" class="form-control" id="title" style="height: 30px" placeholder="タイトル" required="required">
                                     <br>
                                 </div>
                                 </div>
-                                <div class="form-floating">
+                                <div class="col-12 form-floating">
                                 
                              <input type="file" name="imageFile" id="example">
 
