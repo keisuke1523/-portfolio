@@ -366,7 +366,7 @@ img {
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <img1 src="{{ asset('img/log.png')}}" alt="" width="40" height="30" class="d-inline-block align-text-top">dogサイト</a>
+    <div class="d-inline-block align-text-top">dogサイト</a>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">Home</a>
@@ -547,7 +547,6 @@ img {
 <footer class="footer mt-auto py-3">
   <div class="container">
   <div id="footer-logo">
-        <img src="{{ asset('img/log.png')}}"  width="40" height="30" alt="dogsite">
          dogsite
       </div>
       <div>
