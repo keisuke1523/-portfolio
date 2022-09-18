@@ -10,7 +10,7 @@
 <style>
 
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
 
 .bd-placeholder-img {
             font-size: 1.125rem;
@@ -262,11 +262,8 @@ a:hover {
 }
 }
 
-@media (max-width: 768px) {
-  .card {
+@media screen and (max-width: 768px) {
   
-    width: 100%;
-  }
 
   h1 {
     font-size: 20px;
