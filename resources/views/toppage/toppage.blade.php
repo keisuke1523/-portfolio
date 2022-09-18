@@ -316,9 +316,22 @@ a:hover {
 }
 
 
-
+.grid {
+  display: grid;
+  gap:1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 
 }
+
+img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+}
+
+
 
 
 
@@ -353,7 +366,7 @@ a:hover {
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <img src="{{ asset('img/log.png')}}" alt="" width="40" height="30" class="d-inline-block align-text-top">dogサイト</a>
+    <img1 src="{{ asset('img/log.png')}}" alt="" width="40" height="30" class="d-inline-block align-text-top">dogサイト</a>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">Home</a>
