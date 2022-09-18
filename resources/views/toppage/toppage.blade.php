@@ -340,7 +340,9 @@ a:hover {
   
 
 
-<body class="text-center"  style="background-color: #e3f2fd">
+<body class="text-center"  style="background-color: #e3f2fd;padding-top: 70px;
+
+">
 <header>
 <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
 <div class="center">
@@ -549,8 +551,17 @@ a:hover {
 </div>
 
 <script>
+// //キャッチコピー(テキスト：アニメーション)
+// $('h1').animate({fontSize:'80px'}, 2000);
+
 //キャッチコピー(テキスト：アニメーション)
-$('h1').animate({fontSize:'80px'}, 2000);
+if (window.matchMedia('(max-width: 768px)').matches) {
+  // ウィンドウサイズ768px以下のときの処理
+  $('h1').animate({fontSize:'50px'}, 2000);
+} else {
+  // それ以外の処理
+  $('h1').animate({fontSize:'80px'}, 2000);
+}
 
 //画面アニメーション
 $(function(){
